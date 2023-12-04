@@ -8,18 +8,16 @@ class Uwudu < Formula
   license "MIT"
 
   depends_on "python@3.9"
-  depends_on "pipenv" => :build
 
   def install
-    system "pipenv", "install", "--deploy", "--ignore-pipfile"
+    system "python3", *Language::Python.setup_install_args(prefix)
 
-    system "pipenv", "run", "python", *Language::Python.setup_install_args(libexec)
-
-    bin.install_symlink libexec/"bin/uwudu"
+    bin.install "bin/uwudu"
   end
 
   test do
     assert_match "uwudu", shell_output("#{bin}/uwudu --version")
   end
 end
+
 
