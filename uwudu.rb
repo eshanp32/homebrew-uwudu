@@ -10,15 +10,19 @@ class Uwudu < Formula
   depends_on "python@3.9"
 
   def install
-    system "python3", *Language::Python.setup_install_args(prefix)
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resources
 
-    bin.install_symlink "#{prefix}/bin/uwudu" => "uwudu"
+    system "python3", *Language::Python.setup_install_args(libexec)
+
+    bin.install_symlink "#{libexec}/bin/uwudu" => "uwudu"
   end
 
   test do
     assert_match "uwudu", shell_output("#{bin}/uwudu --version")
   end
 end
+
 
 
 
