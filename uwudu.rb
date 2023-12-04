@@ -10,7 +10,8 @@ class Uwudu < Formula
   depends_on "python@3.9"
 
   def install
-    virtualenv_install_with_resources
+    system "python3", *Language::Python.setup_install_args(prefix)
+    bin.install "bin/uwudu"
   end
 
   test do
