@@ -12,12 +12,13 @@ class Uwudu < Formula
   def install
     system "python3", *Language::Python.setup_install_args(prefix)
 
-    bin.install Dir["#{prefix}/bin/*"]
+    bin.install_symlink "#{prefix}/bin/uwudu" => "uwudu"
   end
 
   test do
     assert_match "uwudu", shell_output("#{bin}/uwudu --version")
   end
 end
+
 
 
