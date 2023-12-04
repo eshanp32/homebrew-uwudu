@@ -8,12 +8,12 @@ class Uwudu < Formula
   license "MIT"
 
   depends_on "python@3.9"
+  depends_on "pipenv" => :build
 
   def install
-    venv = virtualenv_create(libexec, "python3")
-    venv.pip_install resources
+    system "pipenv", "install", "--deploy", "--ignore-pipfile"
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system "pipenv", "run", "python", *Language::Python.setup_install_args(libexec)
 
     bin.install_symlink libexec/"bin/uwudu"
   end
