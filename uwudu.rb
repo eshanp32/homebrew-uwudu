@@ -12,7 +12,7 @@ class Uwudu < Formula
   def install
     system "python3", *Language::Python.setup_install_args(prefix)
 
-    bin.install "bin/uwudu"
+    bin.install Dir["#{prefix}/bin/*"]
   end
 
   test do
