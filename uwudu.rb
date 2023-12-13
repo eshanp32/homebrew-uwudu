@@ -8,7 +8,7 @@ class Uwudu < Formula
   url "https://files.pythonhosted.org/packages/b7/80/d4c41c94a7321ae5e90e70a252b3619d2acf9fbfc8c18c360848243f4bce/uwudu-1.0.1.tar.gz"
   sha256 "968269bd1a8fc68db54ad4360d2c18c8fc5c070802c957f79384c0eb6c64420f"
 
-  depends_on :python3
+  depends_on "python3"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
