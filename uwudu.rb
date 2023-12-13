@@ -4,12 +4,11 @@ class Uwudu < Formula
   include Language::Python::Virtualenv
 
   desc "Formula for uwudu - your python todo cli (U w U)"
-  homepage "https://github.com/eshanp32/uwudu"
-  url "https://files.pythonhosted.org/packages/37/9a/e8e2f33e9bb0e18596c418bc73efd1a686aa96693cc3c5ddb758ed6ca42a/uwudu-0.1.0.tar.gz"
-  sha256 "adc1ea9b18f9f14ed946d7614b9202bdd103d282edabca23f4e58e55be8e1630"
-  license "MIT"
+  homepage ""
+  url "https://files.pythonhosted.org/packages/b7/80/d4c41c94a7321ae5e90e70a252b3619d2acf9fbfc8c18c360848243f4bce/uwudu-1.0.1.tar.gz"
+  sha256 "968269bd1a8fc68db54ad4360d2c18c8fc5c070802c957f79384c0eb6c64420f"
 
-  depends_on "python3"
+  depends_on :python3
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
@@ -22,8 +21,8 @@ class Uwudu < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/d7/12/63deef355537f290d5282a67bb7bdd165266e4eca93cd556707a325e5a24/wcwidth-0.2.12.tar.gz"
-    sha256 "f01c104efdf57971bcb756f054dd58ddec5204dd15fa31d6503ea57947d97c02"
+    url "https://files.pythonhosted.org/packages/5e/5f/1e4bd82a9cc1f17b2c2361a2d876d4c38973a997003ba5eb400e8a932b6c/wcwidth-0.2.6.tar.gz"
+    sha256 "a5220780a404dbe3353789870978e472cfe477761f06ee55077256e509b156d0"
   end
 
   def install
@@ -35,6 +34,7 @@ class Uwudu < Formula
     false
   end
 end
+
 
 
 
